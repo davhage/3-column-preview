@@ -1,0 +1,193 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+/* Variables */
+:root {
+    --light: hsl(0, 0%, 95%);
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --dark-cyan: hsl(179, 100%, 13%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body */
+body {
+    background-color: var(--light);
+    /* height: 100vh; */
+}
+
+/* Main containers and text */
+main {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 100%;
+    justify-content: center;
+    min-height: calc(100vh - 40px);
+    width: 100%;
+}
+
+.container {
+    height: 450px;
+    width: 300px;
+}
+
+h2, img, p, button {
+    margin: 20px 35px;
+}
+
+h2 {
+    color: var(--light);
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2.2em;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 0.9375em;
+    font-family: 'Lexend Deca', sans-serif;
+    color: hsl(0, 0%, 100%, 0.75);
+}
+
+button {
+    background-color: hsl(0, 0%, 95%);
+    border: none;
+    border-radius: 20px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-top: 90px;
+    padding: 10px 30px;
+}
+
+/* Sedan Box */
+.sedan {
+    background-color: var(--orange);
+    border-radius: 8px 0 0 8px;
+}
+
+.sedan-but {
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.sedan-but:hover {
+    background-color: var(--orange);
+    border: 1px solid var(--light);
+    color: var(--light);
+}
+
+/* SUV box */
+.suv {
+    background-color: var(--cyan);
+}
+
+.suv-but {
+    color: var(--cyan);
+    cursor: pointer;
+}
+
+.suv-but:hover {
+    background-color: var(--cyan);
+    border: 1px solid var(--light);
+    color: var(--light);
+}
+
+/* Luxury box */
+.lux {
+    background-color: var(--dark-cyan);
+    border-radius: 0 8px 8px 0;
+}
+
+.lux-but {
+    color: var(--dark-cyan);
+    cursor: pointer;
+}
+
+.lux-but:hover {
+    background-color: var(--dark-cyan);
+    border: 1px solid var(--light);
+    color: var(--light);
+}
+
+/* Footer */
+.attribution { 
+    font-size: 11px; 
+    height: 30px;
+    text-align: center; 
+    width: 100%;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/* Media Querys */
+@media only screen and (max-width: 900px)  {
+    h2, img, p, button {
+        margin: 15px 26.25px;
+    }
+    .container {
+        height: 337.5px;
+        width: 225px;
+    }
+    h2 {
+        font-size: 1.65em;
+    }
+    p {
+        font-size: 0.703125em;
+    }
+    button {
+        border-radius: 15px;
+        margin-top: 67.5px;
+        padding: 7.5px 22.5px;
+    }
+
+}
+
+@media only screen and (max-width: 675px) {
+    body {
+        margin: 50px;
+    }
+    main {
+        flex-direction: column;
+    }
+    .container {
+        height: 450px;
+        width: 300px;
+    }
+    
+    h2, img, p, button {
+        margin: 20px 35px;
+    }
+    
+    h2 {
+        font-size: 2.2em;
+    }
+    
+    p {
+        font-size: 0.9375em;
+    }
+    button {
+        border-radius: 20px;
+        margin-top: 90px;
+        padding: 10px 30px;
+    }
+    .sedan {
+        border-radius: 8px 8px 0 0;
+    }
+
+    .suv {
+        border-radius: 0;
+    }
+    .lux {
+        border-radius: 0 0 8px 8px;
+    }
+    footer {
+        margin-top: 10px;
+    }
+}
